@@ -41,9 +41,7 @@ EOF
   s.add_dependency('shotgun', '>= 0.8')
 
   # Test libraries
-  s.add_development_dependency('hpricot', '0.8.3')
-  s.add_development_dependency('rack-test', '0.5.7')
-  s.add_development_dependency('rspec', '1.3.0')
-  s.add_development_dependency('rspec_hpricot_matchers', '1.0')
-  s.add_development_dependency('test-unit', '1.2.3')
+  s.add_development_dependency('elementor', '0.0.8')
+  s.add_development_dependency('minitest', '2.1.0')
+  s.add_development_dependency('rack-test', '0.6.0')
 end
