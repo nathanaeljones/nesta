@@ -18,7 +18,8 @@ module Nesta
 
       def stylesheet(template, options = {}, locals = {})
         defaults, engine = Overrides.render_options(template, :sass, :scss)
-        send(engine, template, defaults.merge(options), locals)
+        renderer = Sinatra::Templates.instance_method(engine)
+        renderer.bind(self).call(template, defaults.merge(options), locals)
       end
     end
 
